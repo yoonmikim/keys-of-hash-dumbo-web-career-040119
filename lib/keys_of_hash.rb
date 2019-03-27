@@ -30,7 +30,7 @@
 
 
 class Hash
-  def keys_of(*args)
+  def keys_of(args)
     arr = []
     map do |key, value|
       if args.include?(value)
