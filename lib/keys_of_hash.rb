@@ -28,8 +28,16 @@
 #   end
 # end
 
+
 class Hash
   def keys_of(*args)
-    map {|key, value| args.include?(value) ? key : nil }.compact
+    arr = []
+    map do |key, value|
+      if args.include?(value)
+        arr << key
+      end
+    end
+
+  return arr
   end
 end
